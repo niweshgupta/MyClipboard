@@ -13,6 +13,8 @@
 	fwrite($file, $_POST["data"]);
 	echo "File saved successfully with name $filename"; 
 	fclose($file);
+	$saved_file = "show.php?name=file$filecount";
+	header("location: $saved_file");
 	?>
 
 </body>
